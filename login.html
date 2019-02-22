@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap  CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
 	<!-- Custom Fonts -->
 	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -29,31 +30,43 @@
 <body>
 	
 	<div class="container-fluid">
-        <div class="row ">
+        <div class="row bg-dark">
             <div class="col-md-3 text-center bg-dark">
-                <ul class="nav nav flex-column">
-                    <li><h2 class="text-light">控制台</h2></li>
-                    <hr>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">公司實績</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">出租活動</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">系統工程</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">人力資源</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">銷售器材</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">人力資源</a>
-                    </li>
-                </ul>
-                <div class="content"></div>
+                            <a class="btn btn-primary"  data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                <h2 class="text-light">控制台</h2>
+                            </a>
+                          
+                          <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                    <ul class="nav nav flex-column">
+                                            
+                                            <hr>
+                                            <li class="nav-item">
+                                                    <a class="nav-link active" href="#">最新消息</a>
+                                                </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link active" href="#">公司實績</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">出租活動</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link disabled" href="#">系統工程</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link disabled" href="#">影音相簿</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link disabled" href="#">銷售器材</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link disabled" href="#">人力資源</a>
+                                            </li>
+                                        </ul>
+                            </div>
+                          </div>
+               
+
             </div>
             <div class="col-md-9 text-right bg-light">
                 <h4 class="text-dark"><a class="text-dark" href="Index.html">Log out</a></h4>
@@ -62,6 +75,7 @@
                             
                         </div>
                         <div class="col-md-3 text-left">
+                            
                             <h3 class="text-dark">新增公程資料</h3>
                             <div class="form-group">
                                 <label for="sel1">工程類型：</label>
@@ -78,11 +92,20 @@
                                 <br>
                                 <p>活動圖片上傳：</p>
                                 <input type="file" class="form-control-file border">
+                                <br>
+                                <button type="button" class="btn btn-success">Upload</button>
                             </div>
                             
                         </div>
-                        <div class="col-md-7">
-                            
+                        <div class="col-md-7 text-left">
+                                <h3 class="text-dark">目前公程資料</h3>
+                                <ul class="list-group">
+                                    <li class="list-group-item">Cras justo odio</li>
+                                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                                    <li class="list-group-item">Morbi leo risus</li>
+                                    <li class="list-group-item">Porta ac consectetur ac</li>
+                                    <li class="list-group-item">Vestibulum at eros</li>
+                                </ul>
                         </div>
                         
                 </div>
@@ -92,7 +115,7 @@
                             
                         </div>
                         <div class="col-md-3 text-left">
-                            <h3 class="text-dark">出租器材資料</h3>
+                            <h3 class="text-dark">新增器材</h3>
                             <div class="form-group">
                                 <label for="sel2">器材類型：</label>
                                     <select class="form-control" id="sel2">
@@ -102,15 +125,23 @@
                                     </select>
                             </div>
                             <div>
-                                
                                 <br>
                                 <p>產品圖片上傳：</p>
                                 <input type="file" class="form-control-file border">
+                                <br>
+                                <button type="button" class="btn btn-success">Upload</button>
                             </div>
                             
                         </div>
-                        <div class="col-md-7">
-                            
+                        <div class="col-md-7 text-left">
+                                <h3 class="text-dark">出租器材資料</h3>
+                                <ul class="list-group">
+                                        <li class="list-group-item">Cras justo odio</li>
+                                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                                        <li class="list-group-item">Morbi leo risus</li>
+                                        <li class="list-group-item">Porta ac consectetur ac</li>
+                                        <li class="list-group-item">Vestibulum at eros</li>
+                                </ul>
                         </div>
                 </div>
             </div>
