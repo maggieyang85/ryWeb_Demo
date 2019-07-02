@@ -2,23 +2,23 @@
 <html>
 <head>
 	<title>News</title>
-	<link rel="icon"  href="img/logo.ico" type="image/x-icon"> <!-- 頁籤的icon -->
+	<link rel="icon"  href="./img/RYicon.ico" type="image/x-icon"> <!-- 頁籤的icon -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Bootstrap  CSS -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<!-- Custom Fonts -->
-	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!-- Plugin CSS -->
-	<link href="magnific-popup/magnific-popup.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap  CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 	<!-- Icon CSS -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 	<!-- Theme CSS -->
 	<link href="css/style.css" rel="stylesheet">
-	<!-- jQuery -->
-	<script src="/js/jquery/dist/js/jquery.min.js"></script>
-
+	<!-- vue.js -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<!-- vue.js table-->
+	<script src="https://cdn.jsdelivr.net/npm/vue-tables-2@1.4.70/dist/vue-tables-2.min.js"></script>
+	
     <style type="text/css">
     	.breadcrumb{
     		background-color: white
@@ -26,242 +26,215 @@
     </style>
 </head>
 <body>
-	<nav class="navbar navbar-fixed-top navbar-inverse">
-  		<div class="container-fluid">
-    		<div class="navbar-header ">
-    		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
-    		        <span class="sr-only">RY nav</span>
-                    <span class="icon-bar"></span>
-                </button>
-     			<a class="navbar-brand " href="Index.html">Reyn Yang</a>
-    		</div>
-    		<div class="collapse navbar-collapse" id="menu">
-	    		<ul class="nav navbar-nav">
-	      			<li><a href="Intro.html">關於瑞揚</a></li>
-	      			<li><a href="News.html">最新消息</a></li>
-	     		    <li class="dropdown">
-	     		    	<a href="Service.html">專業服務</a>
-	     		    	    <div class="dropdown-content">
-	     		    	  		<a href="Service.html">活動統籌</a>
-	     		    	    	<a href="Service.html">器材租賃</a>
-	     		    	    	<a href="Service.html">工程規劃</a>
-	     		    	    	<a href="Service.html">練團室</a>
-	     		    	   		<a href="Service.html">銷售維修</a>
-	     		    	    </div>
-	     		    </li>
-	      			<li><a href="Sales.html">器材展銷</a></li>
-	      			<li><a href="CompanyActivety.html">公司實績</a></li>
-	   			</ul>
-	   			<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a href="Connection.html">聯絡我們</a>
-						<li>	
-							<a href="login.html">管理員</a>
-						</li>
-					</li>
-				</ul>              
-			</div>
+	<div class="container">
+		<div class="d-flex bd-highlight mb-3">
+			<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+				<div class="p-3 flex-grow-1 bd-highlight">
+					<img class="nav_logo" src="./img/RY_WEB_Logo.jpg" alt="Logo">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#RYnavbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+				</div>		
+				<div class="collapse navbar-collapse" id="RYnavbarNav">
+					<ul class="navbar-nav">
+						<div class="p-3 bd-highlight">
+							<li class="nav-item ">
+								<a class="nav-link" href="Index.html">首頁 <span class="sr-only">(current)</span></a>
+							</li>
+						</div>								
+						<div class="p-3 bd-highlight">
+							<li class="nav-item">
+								<a class="nav-link" href="Intro.html">關於瑞揚</a>
+							</li>
+						</div>
+						<div class="p-3 bd-highlight">
+								<li class="nav-item active">
+									<a class="nav-link" href="News.html">最新活動</a>
+								</li>			
+							</div>
+						<div class="p-3 bd-highlight">
+							<li class="nav-item">
+								<a class="nav-link" href="Service.html">專業服務</a>
+							</li>			
+						</div>
+						<div class="p-3 bd-highlight">
+							<li class="nav-item">
+								<a class="nav-link" href="CompanyActivity.html">公司實績</a>
+							</li>
+						</div>
+						<div class="p-3 bd-highlight">
+							<li class="nav-item">
+								<a class="nav-link" href="Connection.html">聯絡我們</a>
+							</li>
+						</div>
+						
+					</ul>			
+				</div>			
+			</nav>		
 		</div>	
-    </nav>
-
-    
-    <div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<div id="webCarousel" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-				    	<li data-target="#webCarousel" data-slide-to="0" class="active"></li>
-				    	<li data-target="#webCarousel" data-slide-to="1"></li>
-				    	<li data-target="#webCarousel" data-slide-to="2"></li>
-				    </ol>
-			  		<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-					    <div class="item active">
-					     	<img src="img/header_info.png" alt="info">
-					     	<div class="carousel-caption">
-					     		<h3 class="text-light">關於瑞揚</h3>
-					     	</div>
-					    </div>
-					    <div class="item">
-					    	<img src="img/header_info.png" alt="info">
-					    	<div class="carousel-caption">
-					     		<h3 class="text-light">關於瑞揚</h3>
-					     	</div>
-					    </div>
-					    <div class="item">
-					     	<img src="img/header_info.png" alt="info">
-					     	<div class="carousel-caption">
-					     		<h3 class="text-light">關於瑞揚</h3>
-					     	</div>
-					    </div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 
-
-
-	<section class="bg-dark">
+    <section>
+		<br><br><br><br>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-offset-1 col-md-10 text-center">
-					<h2 class="section-heading text-light">最新消息</h2>
-					<table class="table">
-						<thead>
-						<tr>
-							<th>
-							#
-							</th>
-							<th>
-								Title
-							</th>
-							<th>
-								Time
-							</th>
-							<th>
-								News
-							</th>
-						</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									1
-								</td>
-								<td>
-									TB - Monthly
-								</td>
-								<td>
-									01/04/2012
-								</td>
-								<td>
-									Default
-								</td>
-							</tr>
-							<tr class="table-active"> <!--not ready -->
-								<td>
-									1
-								</td>
-								<td>
-									TB - Monthly
-								</td>
-								<td>
-									01/04/2012
-								</td>
-								<td>
-									Approved
-								</td>
-							</tr>
-							<tr class="table-success">
-								<td>
-									2
-								</td>
-								<td>
-									TB - Monthly
-								</td>
-								<td>
-									02/04/2012
-								</td>
-								<td>
-									Declined
-								</td>
-							</tr>
-							<tr class="table-warning">
-								<td>
-									3
-								</td>
-								<td>
-									TB - Monthly
-								</td>
-								<td>
-									03/04/2012
-								</td>
-								<td>
-									Pending
-								</td>
-							</tr>
-							<tr class="table-danger">
-								<td>
-									4
-								</td>
-								<td>
-									TB - Monthly
-								</td>
-								<td>
-									04/04/2012
-								</td>
-								<td>
-									Call in to confirm
-								</td>
-							</tr>
-						</tbody>
-					</table>
+				<div class="col-md-1"></div>
+				<div class="col-md-10 card-deck"> <!--import new video-->
+					<div class="card text-center video_collection">
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wsfXogfHXmM" allowfullscreen></iframe>
+						</div>
+						<div class="card-body video_collection">
+							<p class="text-dark" id="lastest01">最新活動1</p>
+						</div>
+					</div>
+					<div class="card text-center video_collection">
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uXehP-Mzuhc" allowfullscreen></iframe>
+						</div>
+						<div class="card-body video_collection">
+							<p class="text-dark" id="lastest02">最新活動2</p>
+						</div>
+					</div>
+					<div class="card text-center video_collection">
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0VBmAceyOfY" allowfullscreen></iframe>
+						</div>
+						<div class="card-body video_collection">
+							<p class="text-dark" id="lastest03">最新活動3</p>
+						</div>
+					</div>
 				</div>
+				<div class="col-md-1"></div>
 			</div>
+		</div>
+	</section>
+    
+
+	<section>
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-1"></div>
+				<div class="col-md-10 text-center">
+					<h2 class="section-heading text-light">最新活動</h2>
+					<!-- vue.js table -->
+					<div id="vue_table">
+						<v-client-table ref="myTable" :data="tableData" :columns="columns" :options="options"></v-client-table>
+					</div>
+
+					<table class="table">
+							<thead class="text-light text-center">
+							  <tr>
+								<th scope="col">日期</th>
+								<th scope="col">標題</th>
+								<th scope="col">圖片</th>
+								<th scope="col">影片連結</th>
+							  </tr>
+							</thead>
+							<tbody  id="newsTable">
+							  
+							</tbody>
+						  </table>
+						  
 				</div>
-				<div class="col-md-4">
-					<nav class="pagination-sm">
-						<ul class="pagination">
-							<li class="page-item">
-								<a class="page-link" href="#">Previous</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">1</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">2</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">3</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">4</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">5</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">Next</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
+				<div class="col-md-1"></div>
 			</div>
 		</div>
 	</section>
 
 	<!-- 頁尾 -->
 	<footer> 
-		<section class="bg-light">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-4 text-center">
-						<a href="Index.html"><h5 class="text-dark">Home</h5></a>
-						<a href="Intro.html"><h5 class="text-dark">About</h5></a>
-						<a><h5 class="text-dark">語言</h5></a>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-4">
+					<div class="footer_title">
+						<h4 class="text-dark">瑞揚專業音響有限公司</h4>
+						<p>Reyn Yang Professional Sound Co., Ltd<br>
+							台北市內湖區洲子街67號1樓</p>
 					</div>
-					<div class="col-md-8 text-center">
-						<a href="Connection.html"><h4>聯絡我們</h4></a>
-						<hr>
-						<h5 class="text-dark">台灣台北總公司:11493台北市內湖區洲子街67號1樓
-						<br>TEL:886-2-8797-8687
-						<br>FAX:886-2-8797-8987
-	     		    	<br>Email:reynyang@ms46.hinet.net</h5>
+					<i class="fas fa-phone-square"></i>
+					<i class="fas fa-print"></i>
+					<i class="fab fa-facebook-square"></i>
+					<i class="far fa-envelope"></i>
+				</div>
+				<div class="col-md-2"></div>
+				<div class="col-md-5">
+					<div class="footer_site_map">
+						<a class="text-gray" href="">首頁</a>
+						<div class="footer_site_map_sub">
+							<a class="text-gray" href="">關於瑞揚</a>
+							<a class="text-gray" href="">品牌精神</a>
+							<a class="text-gray" href="">人力資源</a>
+						</div>
+						<div class="footer_site_map_sub">
+							<a class="text-gray" href="">專業服務</a>
+							<a class="text-gray" href="">活動統籌</a>
+							<a class="text-gray" href="">器材租借</a>
+							<a class="text-gray" href="">工程規劃</a>
+							<a class="text-gray" href="">銷售維修</a>
+						</div>
+						<div class="footer_site_map_sub">
+							<a class="text-gray" href="">公司實績</a>
+							<a class="text-gray" href="">演藝活動</a>
+							<a class="text-gray" href="">宗教活動場所</a>
+							<a class="text-gray" href="">廳堂</a>
+							<a class="text-gray" href="">體育館</a>
+							<a class="text-gray" href="">公共場所</a>
+						</div>
 					</div>
 				</div>
+				
 			</div>
-		</section>
+		</div>
 	</footer>
 
+	<!-- 引入 firestore 函式庫 -->
+	<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+	
+	<script>
+		//Initialize Firebase
+		var firebase;
+		var config = {
+			apiKey: "AIzaSyCaW8LvaliC3wAoVgV8YmpSJHsyxVRl84E",
+			authDomain: "rywebsite-data.firebaseapp.com",
+			databaseURL: "https://rywebsite-data.firebaseio.com",
+			projectId: "rywebsite-data",
+			storageBucket: "rywebsite-data.appspot.com",
+			messagingSenderId: "789278831323"
+		};
+		firebase.initializeApp(config);
+		var db = firebase.firestore();
+		//var $show_table = $('newsTable');
 
-	<!--顯示頁面切換 -->
-	<script type="text/javascript">
+		$(function(){
+			//讀取資料庫內全部資料
+			db.collection("Activity").get().then(function(querySnapshot) {
+    			querySnapshot.forEach(function(doc) {
+				// doc.data() is never undefined for query doc snapshots
+				//先取得目前的row數
+				var num = document.getElementById("newsTable").rows.length;
+				//建立新的tr 因為是從0開始算 所以目前的row數剛好為目前要增加的第幾個tr
+				var Tr = document.getElementById("newsTable").insertRow(num);
+				//建立新的td 而Tr.cells.length就是這個tr目前的td數
+				Td = Tr.insertCell(Tr.cells.length);
+				//而這個就是要填入td中的innerHTML
+				Td.innerHTML='<p class="text-light text-center">'+doc.id+'</p>';
+				Td = Tr.insertCell(Tr.cells.length);
+				Td.innerHTML='<p class="text-light text-center">'+doc.data().name+'</p>';
+				Td = Tr.insertCell(Tr.cells.length);
+				Td.innerHTML='<p class="text-light text-center">'+doc.data().img+'</p>';
+				Td = Tr.insertCell(Tr.cells.length);
+				Td.innerHTML='<p class="text-light text-center">'+doc.data().link+'</p>';
+        		console.log(doc.id, " => ", doc.data());
+   				});
+			});
+			
+		});
+		
+
 		
 	</script>
-
 </body>
 </html>

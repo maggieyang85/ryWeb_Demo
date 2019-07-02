@@ -2,23 +2,21 @@
 <html>
 <head>
 	<title>Connection</title>
-	<link rel="icon"  href="img/logo.ico" type="image/x-icon"> <!-- 頁籤的icon -->
+	<link rel="icon"  href="./img/RYicon.ico" type="image/x-icon"> <!-- 頁籤的icon -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Bootstrap  CSS -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<!-- Custom Fonts -->
-	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!-- Plugin CSS -->
-	<link href="magnific-popup/magnific-popup.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap  CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 	<!-- Icon CSS -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 	<!-- Theme CSS -->
 	<link href="css/style.css" rel="stylesheet">
-	<!-- jQuery -->
-	<script src="/js/jquery/dist/js/jquery.min.js"></script>
-
+	<link href="css/connection.css" rel="stylesheet">
+	<!-- vue.js -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <style type="text/css">
     	.breadcrumb{
     		background-color: white
@@ -26,137 +24,154 @@
     </style>
 </head>
 <body>
-	<nav class="navbar navbar-fixed-top navbar-inverse">
-  		<div class="container-fluid">
-    		<div class="navbar-header ">
-    		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
-    		        <span class="sr-only">RY nav</span>
-                    <span class="icon-bar"></span>
-                </button>
-     			<a class="navbar-brand " href="Index.html">Reyn Yang</a>
-    		</div>
-    		<div class="collapse navbar-collapse" id="menu">
-	    		<ul class="nav navbar-nav">
-	      			<li><a href="Intro.html">關於瑞揚</a></li>
-	      			<li><a href="News.html">最新消息</a></li>
-	     		    <li class="dropdown">
-	     		    	<a href="Service.html">專業服務</a>
-	     		    	    <div class="dropdown-content">
-	     		    	  		<a href="Service.html">活動統籌</a>
-	     		    	    	<a href="Service.html">器材租賃</a>
-	     		    	    	<a href="Service.html">工程規劃</a>
-	     		    	    	<a href="Service.html">練團室</a>
-	     		    	   		<a href="Service.html">銷售維修</a>
-	     		    	    </div>
-	     		    </li>
-	      			<li><a href="Sales.html">器材展銷</a></li>
-	      			<li><a href="CompanyActivety.html">公司實績</a></li>
-	   			</ul>
-	   			<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a href="Connection.html">聯絡我們</a>
-					</li>
-					<li>	
-						<a href="login.html">管理員</a>
-					</li>
-				</ul>              
-			</div>
+	<div class="container">
+		<div class="d-flex bd-highlight mb-3">
+			<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+				<div class="p-3 flex-grow-1 bd-highlight">
+					<img class="nav_logo" src="./img/RY_WEB_Logo.jpg" alt="Logo">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#RYnavbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+				</div>		
+				<div class="collapse navbar-collapse" id="RYnavbarNav">
+					<ul class="navbar-nav">
+						<div class="p-3 bd-highlight">
+							<li class="nav-item">
+								<a class="nav-link" href="Index.html">首頁 <span class="sr-only">(current)</span></a>
+							</li>
+						</div>								
+						<div class="p-3 bd-highlight">
+							<li class="nav-item">
+								<a class="nav-link" href="Intro.html">關於瑞揚</a>
+							</li>
+						</div>
+						<div class="p-3 bd-highlight">
+								<li class="nav-item">
+									<a class="nav-link" href="News.html">最新活動</a>
+								</li>			
+							</div>
+						<div class="p-3 bd-highlight">
+							<li class="nav-item">
+								<a class="nav-link" href="Service.html">專業服務</a>
+							</li>			
+						</div>
+						<div class="p-3 bd-highlight">
+							<li class="nav-item">
+								<a class="nav-link" href="CompanyActivity.html">公司實績</a>
+							</li>
+						</div>
+						<div class="p-3 bd-highlight">
+							<li class="nav-item active">
+								<a class="nav-link" href="Connection.html">聯絡我們</a>
+							</li>
+						</div>
+					
+					</ul>			
+				</div>			
+			</nav>		
 		</div>	
-    </nav>
+	</div>	
 
-
-    <div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<div id="webCarousel" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-				    	<li data-target="#webCarousel" data-slide-to="0" class="active"></li>
-				    	<li data-target="#webCarousel" data-slide-to="1"></li>
-				    	<li data-target="#webCarousel" data-slide-to="2"></li>
-				    </ol>
-			  		<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-					    <div class="item active">
-					     	<img src="img/header_info.png" alt="info">
-					     	<div class="carousel-caption">
-					     		<h3 class="text-light">關於瑞揚</h3>
-					     	</div>
-					    </div>
-					    <div class="item">
-					    	<img src="img/header_info.png" alt="info">
-					    	<div class="carousel-caption">
-					     		<h3 class="text-light">關於瑞揚</h3>
-					     	</div>
-					    </div>
-					    <div class="item">
-					     	<img src="img/header_info.png" alt="info">
-					     	<div class="carousel-caption">
-					     		<h3 class="text-light">關於瑞揚</h3>
-					     	</div>
-					    </div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-	<section class="bg-primary">
+    
+	<section class="connect_info bg-light">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-offset-1 col-md-10 text-center bg-primary">
-					<h3>瑞陽專業音響有限公司 - 台灣台北總公司</h3>
-					<hr class="hr-dark">
-					<p>11493台北市內湖區洲子街67號2樓
-						<br>TEL: 886-2-8797-8687
-						<br>FAX: 886-2-8797-8987
-						<br>Email: reynyang@ms46.hinet.net</p>
-					<br>
-					<h3>練團室 - 台灣台北</h3>
-					<hr class="hr-dark">
-					<p>11493台北市內湖區洲子街67號1樓
-						<br>TEL: 886-2-8797-8687
-						<br>FAX: 886-2-8797-8987</p>
-					<br>
-					<h3>倉管出租部 - 台灣新北市</h3>
-					<hr class="hr-dark">
-					<p>24942新北市八里區中華路三段43號
-						<br>TEL: 886-2-2610-6171
-						<br>FAX: 886-2-2610-6172</p>
-					<br>
-					<h3>瑞陽視聽設備有限公司 - 中國上海公司</h3>
-					<hr class="hr-dark">
-					<p>TEL: +86(21)6405-0598 
-						<br>FAX: +86(21)6405-0868
-						<br>Email: reynyang@ms46.hinet.net</p>
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<div class="card-deck">
+						<div class="card">
+							<div class="card-header text-center">瑞陽專業音響有限公司 - 台灣台北總公司</div>
+							<img src="img/Logo.jpg">
+							<div class="card-body">
+								<p class="card-text">11493台北市內湖區洲子街67號2樓
+									<br>TEL: 886-2-8797-8687
+									<br>FAX: 886-2-8797-8987
+									<br>Email: reynyang@ms46.hinet.net</p>							
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header text-center">練團室 - 台灣台北</div>
+							<img class="" src="img/connect_happeningRoom.jpg">
+							<div class="card-body">
+								<p class="card-text">11493台北市內湖區洲子街67號1樓
+									<br>TEL: 886-2-8797-8687
+									<br>FAX: 886-2-8797-8987</p>
+							</div>
+						</div>
+					 </div>
+					 <br>
+					 <div class="card-deck">
+						<div class="card">
+							<div class="card-header text-center">倉管出租部 - 台灣新北市</div>
+							<img src="img/Logo.jpg">
+							<div class="card-body">
+								<p class="card-text">24942新北市八里區中華路三段43號
+									<br>TEL: 886-2-2610-6171
+									<br>FAX: 886-2-2610-6172</p>							
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header text-center">瑞陽視聽設備有限公司 - 中國上海公司</div>
+							<img src="img/Logo.jpg">
+							<div class="card-body">
+								<p class="card-text">EL: +86(21)6405-0598 
+									<br>FAX: +86(21)6405-0868
+									<br>Email: reynyang@ms46.hinet.net</p>
+							</div>
+						</div>
+					</div>
 				</div>
+				<div class="col-md-2"></div>
 			</div>
+			<br><br>
 		</div>
 		</section>
 
 	<!-- 頁尾 -->
 	<footer> 
-		<section class="bg-light">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-4 text-center">
-						<a href="Index.html"><h5 class="text-dark">Home</h5></a>
-						<a href="Intro.html"><h5 class="text-dark">About</h5></a>
-						<a><h5 class="text-dark">語言</h5></a>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-4">
+					<div class="footer_title">
+						<h4 class="text-dark">瑞揚專業音響有限公司</h4>
+						<p>Reyn Yang Professional Sound Co., Ltd<br>
+							台北市內湖區洲子街67號1樓</p>
 					</div>
-					<div class="col-md-8 text-center">
-						<a href="Connection.html"><h4>聯絡我們</h4></a>
-						<hr>
-						<h5 class="text-dark">台灣台北總公司:11493台北市內湖區洲子街67號1樓
-						<br>TEL:886-2-8797-8687
-						<br>FAX:886-2-8797-8987
-	     		    	<br>Email:reynyang@ms46.hinet.net</h5>
+					<i class="fas fa-phone-square"></i>
+					<i class="fas fa-print"></i>
+					<i class="fab fa-facebook-square"></i>
+					<i class="far fa-envelope"></i>
+				</div>
+				<div class="col-md-2"></div>
+				<div class="col-md-5">
+					<div class="footer_site_map">
+						<a class="text-gray" href="">首頁</a>
+						<div class="footer_site_map_sub">
+							<a class="text-gray" href="">關於瑞揚</a>
+							<a class="text-gray" href="">品牌精神</a>
+							<a class="text-gray" href="">人力資源</a>
+						</div>
+						<div class="footer_site_map_sub">
+							<a class="text-gray" href="">專業服務</a>
+							<a class="text-gray" href="">活動統籌</a>
+							<a class="text-gray" href="">器材租借</a>
+							<a class="text-gray" href="">工程規劃</a>
+							<a class="text-gray" href="">銷售維修</a>
+						</div>
+						<div class="footer_site_map_sub">
+							<a class="text-gray" href="">公司實績</a>
+							<a class="text-gray" href="">演藝活動</a>
+							<a class="text-gray" href="">宗教活動場所</a>
+							<a class="text-gray" href="">廳堂</a>
+							<a class="text-gray" href="">體育館</a>
+							<a class="text-gray" href="">公共場所</a>
+						</div>
 					</div>
 				</div>
+				
 			</div>
-		</section>
+		</div>
 	</footer>
 
 
