@@ -1,0 +1,14 @@
+.nav-item{
+    color: aliceblue;
+}
+.btn-blue{
+    background: rgb(1,57,151);
+}
+
+a:hover{
+    background: white;
+    color: rgb(1,57,151);
+}
+.activitiy-tab{
+    text-align: center;
+}
